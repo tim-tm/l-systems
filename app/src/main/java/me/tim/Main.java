@@ -122,12 +122,18 @@ public class Main {
         EndMode2D();
 
         DrawRectangle(screenWidth-screenWidth/3, 0, screenWidth, screenHeight, LIGHTGRAY);
-        DrawText("LSystems", screenWidth-screenWidth/3+(screenWidth/3)/2-MeasureText("LSystems", 24)/2, 10, 24, BLACK);
-        DrawText("press right arrow to step", screenWidth-screenWidth/3+(screenWidth/3)/2-MeasureText("press right arrow to step", 14)/2, 50, 14, BLACK);
-        DrawText("Loaded L-system:", screenWidth-screenWidth/3+(screenWidth/3)/2-MeasureText("Loaded L-system", 22)/2, 100, 22, BLACK);
-        DrawText(this.system.prettyString(), screenWidth-screenWidth/3+(screenWidth/3)/2-MeasureText(this.system.prettyString(), 20)/2, 130, 20, BLACK);
-        DrawText("Guidelines:", screenWidth-screenWidth/3+(screenWidth/3)/2-MeasureText("Guidelines", 22)/2, 280, 22, BLACK);
-        DrawText("X,Y: Line\n\n[,]: Separation\n\n-,+: Rotate by " + this.plus_angle + "°", screenWidth-screenWidth/3+(screenWidth/3)/2-MeasureText("X,Y: Line\n\n[,]: Separation\n\n-,+: Rotate by " + this.plus_angle + "°", 20)/2, 310, 20, BLACK);
+        String s = "LSystems";
+        DrawText(s, screenWidth-screenWidth/3+(screenWidth/3)/2-MeasureText(s, 24)/2, 10, 24, BLACK);
+        s = "press right arrow to step";
+        DrawText(s, screenWidth-screenWidth/3+(screenWidth/3)/2-MeasureText(s, 14)/2, 50, 14, BLACK);
+        s = "Loaded L-system:";
+        DrawText(s, screenWidth-screenWidth/3+(screenWidth/3)/2-MeasureText(s, 22)/2, 100, 22, BLACK);
+        s = this.system.prettyString();
+        DrawText(s, screenWidth-screenWidth/3+(screenWidth/3)/2-MeasureText(s, 20)/2, 130, 20, BLACK);
+        s = "Guidelines:";
+        DrawText(s, screenWidth-screenWidth/3+(screenWidth/3)/2-MeasureText(s, 22)/2, 280, 22, BLACK);
+        s = "X,Y: Line\n\n[,]: Separation\n\n-,+: Rotate " + this.minus_angle + "°/" + this.plus_angle + "°";
+        DrawText(s, screenWidth-screenWidth/3+(screenWidth/3)/2-MeasureText(s, 20)/2, 310, 20, BLACK);
 
         EndDrawing();
     }

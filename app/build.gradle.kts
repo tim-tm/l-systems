@@ -28,3 +28,13 @@ application {
 tasks.named<Test>("test") {
     useJUnitPlatform()
 }
+
+tasks.jar {
+    manifest.attributes["Main-Class"] = application.mainClass
+    val dependencies = configurations
+        .runtimeClasspath
+        .get()
+        .map(::zipTree) // OR .map { zipTree(it) }
+    from(dependencies)
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}

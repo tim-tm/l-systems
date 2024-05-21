@@ -4,4 +4,4 @@ plugins {
 }
 
 rootProject.name = "lsystems"
-include("app")
+include("lsystems")

@@ -1,4 +1,4 @@
-# L-systems
+# lsystems
 
 This is a "simple" L-system implementation in Java using [Jaylib](https://github.com/electronstudio/jaylib) ([Raylib](https://www.raylib.com/) bindings for Java).
 
